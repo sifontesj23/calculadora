@@ -1,0 +1,51 @@
+<html lang="en">   <!--Esta tag é o elemento básico da estrutura do HTML. todos os elementos do documento. Todo documento HTML deve iniciar e finalizar com essa tag;-->
+<head>               <!--Essa tag delimita o cabeçalho do documento. Não possui nenhum valor visível, porém é capaz de transmitir ao navegador diversas informações-->
+    <meta charset="UTF-8"><!-- Essa tag permite inserir metadados ao seu documento, no caso acima, a informação charset=”UTF-8″, que garante a compatibilidade do código com os caracteres de padrão latino americano-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="jesuscal.css">
+    <script src="jesusCal.js"></script>
+</head>                         
+<body>                        <!--representa o corpo do documento. nessa tag estao todos os elementos visíveis do site-->
+
+    <div class="fundo"> <!--Divisao de pagina-->
+        <h1>Elaborado por: Jesus Sifontes</h1>  
+               <div class="calculadora"> <!--Divisao de pagina-->
+            <h3>Calculadora</h3>      <!--Titulo Calculadora-->
+            <p id="resultado"></p>       <!-- paragrafo vazio com id=resultado-->
+            <table>                      <!---->
+                <tr>                     <!---->
+                    <td><button class="botao" onclick="clean()">C</td><!--botáo para limpar-->
+                    <td><button class="botao" onclick="back()"><</td> <!--botáo para retornar-->
+                    <td><button class="botao" onclick="insert('/')">/</button></td><!--botáo para divisão-->
+                    <td><button class="botao" onclick="insert('*')">*</button></td><!--botáo para multiplicar-->
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('7')">7</button></td> <!--botáo nuemro 7-->
+                    <td><button class="botao" onclick="insert('8')">8</button></td> <!--botáo nuemro 8-->
+                    <td><button class="botao" onclick="insert('9')">9</button></td> <!--botáo nuemro 9-->
+                    <td><button class="botao" onclick="insert('-')">-</button></td> <!--botáo nuemro menos-->
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('4')">4</button></td> <!--botáo nuemro 4-->
+                    <td><button class="botao" onclick="insert('5')">5</button></td> <!--botáo nuemro insertr 5-->
+                    <td><button class="botao" onclick="insert('6')">6</button></td> <!--botáo insertar numero 6-->
+                    <td><button class="botao" onclick="insert('+')">+</button></td>  <!--botáo insertar +-->
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('1')">1</button></td><!--botáo insertar numero 1-->
+                    <td><button class="botao" onclick="insert('2')">2</button></td> <!--botáo insertar numero 2-->
+                    <td><button class="botao" onclick="insert('3')">3</button></td> <!--botáo insertar numero 3-->
+                    <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td> <!--botáo para calcular-->
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td> <!--botáo insertar numero 0-->
+                    <td><button class="botao" onclick="insert('.')">.</button></td> <!--botáo insertar ponto-->
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
